@@ -1,6 +1,7 @@
 # node-red-LED-checkbox
 This simple code has been done for nodered , a LED style with text inside, input & output are classic boolean true or false. User can change the switchbox state by a click.
 change the style parameters inside the template Text, dimensions and colors can be adjusted as need.
+
 Template node with switchbox
 ![immagine](https://github.com/robertobuti/node-red-LED-checkbox/assets/25209640/5c4fbe11-15ff-485c-b71d-3e9180c823d4)
 
