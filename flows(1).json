@@ -1,0 +1,45 @@
+[
+    {
+        "id": "ec90d57d7e0c1429",
+        "type": "ui_template",
+        "z": "a1cd85b06408ace3",
+        "group": "4dbe3bc81b4437fa",
+        "name": "w0d0",
+        "order": 13,
+        "width": 1,
+        "height": 1,
+        "format": "<div id=\"checkbox-container-0\"\n    style=\"position:relative; width:30px; height:30px; background-color: {{ checked ? 'lightgreen' : 'darkgreen' }}; border-radius: 50%; cursor: pointer;\"\n    ng-click=\"toggleCheckbox()\">\n        <div id=\"checkbox-text\"\n            style=\"position:absolute; top:50%; left:50%; transform: translate(-50%, -50%); font-size:14px; color: {{ checked ? 'black' : 'white' }};\">\n            Su</div>\n    <input type=\"hidden\" ng-model=\"checked\" ng-init=\"checked = flow.get('checkboxes')[0] || false\">\n</div>\n\n<script>\n    (function(scope) {\n        scope.$watch('msg', function(msg) {\n            if (msg) {\n                scope.checked = msg.payload;\n            }\n        });\n\n        scope.toggleCheckbox = function() {\n            scope.checked = !scope.checked;\n            scope.send({payload: scope.checked, id: 0});\n        };\n    })(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 870,
+        "y": 200,
+        "wires": [
+            [
+                "99c33b337ae70665"
+            ]
+        ]
+    },
+    {
+        "id": "4dbe3bc81b4437fa",
+        "type": "ui_group",
+        "name": "Metering",
+        "tab": "34afc2e6f630c01e",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "34afc2e6f630c01e",
+        "type": "ui_tab",
+        "name": "Metering pumps",
+        "icon": "fa-tint",
+        "order": 8,
+        "disabled": false,
+        "hidden": false
+    }
+]
